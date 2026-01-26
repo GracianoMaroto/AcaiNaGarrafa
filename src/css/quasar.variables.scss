@@ -23,3 +23,76 @@ $positive: #21ba45;
 $negative: #c10015;
 $info: #31ccec;
 $warning: #f2c037;
+
+:root {
+  --roxo-principal: #5a2d82;
+  --roxo-escuro: #3e1f5c;
+  --roxo-claro: #8e5fbf;
+
+  --creme: #f4eedc;
+
+  --font-title: 'Anton', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.enter {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 1px;
+  color: var(--roxo-principal);
+  text-transform: uppercase;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--roxo-principal);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  border-radius: 14px;
+  padding: 14px 28px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .glass-card {
+    border-radius: 24px;
+  }
+}
