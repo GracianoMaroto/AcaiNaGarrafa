@@ -1,11 +1,17 @@
 <template>
-  <section class="section" v-intersect>
+  <section class="section" id="sabores">
     <h2 class="section-title text-center">Nossos Sabores</h2>
 
-    <div class="row q-col-gutter-md container">
+    <div class="row q-col-gutter-lg container">
       <div v-for="flavor in flavors" :key="flavor.name" class="col-12 col-md-4">
-        <q-card class="flavor-card glass-card" v-intersect>
-          <q-img src="/icons/acaisnagarrafa.jpeg" alt="Açaí cremoso em garrafa" ratio="1" />
+        <q-card class="flavor-card-premium">
+          <q-img
+            :src="flavor.image"
+            ratio="1"
+            class="flavor-img"
+            alt="Sabores de açaí na na garrafa em Vitória da Conquista"
+            loading="lazy"
+          />
 
           <q-card-section>
             <h3>{{ flavor.name }}</h3>
@@ -13,7 +19,13 @@
           </q-card-section>
 
           <q-card-actions align="center">
-            <q-btn color="primary" :href="flavor.link" target="_blank" label="Quero agora" />
+            <q-btn
+              unelevated
+              class="cta-btn"
+              :href="flavor.link"
+              target="_blank"
+              label="Quero agora"
+            />
           </q-card-actions>
         </q-card>
       </div>
@@ -27,31 +39,44 @@ import { whatsappMsg } from 'src/utils/whatsapp'
 const flavors = [
   {
     name: 'Tradicional',
-    desc: 'Açaí com leite condensado',
-    image: '/images/tradicional.png',
+    desc: 'Açaí batido com leite condensado',
+    image: '/src/assets/acaileitecondensado.jpeg',
     link: whatsappMsg('Quero o açaí tradicional 🍇'),
   },
   {
     name: 'Morango',
     desc: 'Açaí com morango e leite condensado',
-    image: '/images/morango.png',
+    image: '/src/assets/acaimorango.jpg',
     link: whatsappMsg('Quero o açaí de morango 🍓'),
   },
   {
     name: 'Maracujá',
-    desc: 'Açaí com calda de maracujá',
-    image: '/images/maracuja.png',
+    desc: 'Açaí com calda artesanal de maracujá',
+    image: '/src/assets/acaimaracuja.jpeg',
     link: whatsappMsg('Quero o açaí de maracujá 🥭'),
   },
 ]
 </script>
 
 <style scoped>
-.section {
-  padding: 80px 0;
+.flavor-card-premium {
+  border-radius: 26px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
-.flavor-card h3 {
+.flavor-card-premium:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.flavor-img {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.flavor-card-premium h3 {
   color: var(--roxo-principal);
+  margin-bottom: 6px;
 }
 </style>
