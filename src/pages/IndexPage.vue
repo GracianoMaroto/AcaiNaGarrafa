@@ -13,7 +13,7 @@
           <FlavorsSection />
         </section>
 
-        <section id="porque">
+        <section id="nosso_acai">
           <WhyUsSection />
         </section>
 
@@ -25,7 +25,7 @@
           <Testimonials />
         </section>
 
-        <section id="porque">
+        <section id="contato">
           <FinalCTA />
           <AppFooter />
         </section>

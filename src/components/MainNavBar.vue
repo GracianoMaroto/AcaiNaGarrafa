@@ -52,7 +52,7 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'Fotos', href: '#fotos' },
   { label: 'Sabores', href: '#sabores' },
-  { label: 'Porque Nós', href: '#contato' },
+  { label: 'Porque Nós', href: '#nosso_acai' },
   { label: 'Preparo', href: '#preparo' },
   { label: 'Feedbacks', href: '#feedbacks' },
   { label: 'Contato', href: '#contato' },

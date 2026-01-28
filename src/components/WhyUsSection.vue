@@ -1,5 +1,5 @@
 <template>
-  <section class="section" id="porque">
+  <section class="section" id="nosso_acai">
     <h2 class="section-title text-center">Por que nosso açaí é diferente?</h2>
 
     <div
