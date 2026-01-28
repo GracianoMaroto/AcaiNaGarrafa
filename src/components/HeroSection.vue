@@ -20,8 +20,8 @@
 
             <div class="benefits q-gutter-md">
               <span>🥤 Cremoso</span>
-              <span>🍓 Artesanal</span>
-              <span>⚡ Pronto pra levar</span>
+              <span>🍓 Natural</span>
+              <span>⚡ Artesanal</span>
             </div>
 
             <q-btn
