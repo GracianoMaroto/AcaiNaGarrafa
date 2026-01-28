@@ -13,8 +13,11 @@
           <FlavorsSection />
         </section>
 
-        <section id="preparo">
+        <section id="porque">
           <WhyUsSection />
+        </section>
+
+        <section id="preparo">
           <HowItWorks />
         </section>
 
@@ -24,9 +27,6 @@
 
         <section id="porque">
           <FinalCTA />
-        </section>
-
-        <section id="contato">
           <AppFooter />
         </section>
 
