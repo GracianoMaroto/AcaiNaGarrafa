@@ -39,6 +39,9 @@
 import { useQuasar } from 'quasar'
 import { whatsappMsg } from 'src/utils/whatsapp'
 import { computed } from 'vue'
+import acaileitecondensado from 'src/assets/acaileitecondensado.jpeg'
+import acaimorango from 'src/assets/acaimorango.jpg'
+import acaimaracuja from 'src/assets/acaimaracuja.jpeg'
 
 const $q = useQuasar()
 
@@ -48,19 +51,19 @@ const flavors = [
   {
     name: 'Tradicional',
     desc: 'Açaí batido com leite condensado',
-    image: '/src/assets/acaileitecondensado.jpeg',
+    image: acaileitecondensado,
     link: whatsappMsg('Quero o açaí tradicional 🍇'),
   },
   {
     name: 'Morango',
     desc: 'Açaí com morango e leite condensado',
-    image: '/src/assets/acaimorango.jpg',
+    image: acaimorango,
     link: whatsappMsg('Quero o açaí de morango 🍓'),
   },
   {
     name: 'Maracujá',
     desc: 'Açaí com calda artesanal de maracujá',
-    image: '/src/assets/acaimaracuja.jpeg',
+    image: acaimaracuja,
     link: whatsappMsg('Quero o açaí de maracujá 🥭'),
   },
 ]

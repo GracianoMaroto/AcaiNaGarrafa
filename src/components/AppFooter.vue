@@ -3,7 +3,7 @@
     <div class="footer-container">
       <!-- BRAND -->
       <div class="footer-col brand text-center">
-        <q-img src="src/assets/LogomarcaAçai.png" class="footer-logo" />
+        <q-img :src="logomarca" class="footer-logo" />
         <p>
           Açaí artesanal na garrafa, feito na hora com ingredientes de qualidade. Refresque seu dia
           com muito sabor 💜
@@ -35,6 +35,8 @@
 </template>
 
 <script setup>
+import logomarca from 'src/assets/LogomarcaAçai.png'
+
 const whatsapp = 'https://wa.me/5577988890597?text=Quero%20pedir%20um%20açaí%20na%20garrafa%20🍇'
 </script>
 

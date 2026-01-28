@@ -6,7 +6,7 @@
         <div class="col-12 col-md-6 flex flex-center text-center">
           <div class="hero-card">
             <q-img
-              src="/src/assets/LogomarcaAçai.png"
+              :src="logomarcaacai"
               class="logo"
               fit="contain"
               alt="Açaí artesanal na garrafa Vitória da Conquista"
@@ -39,7 +39,7 @@
           <div class="glow"></div>
 
           <q-img
-            src="src/assets/acaicomcanudo.jpg"
+            :src="acaicomcanudo"
             class="hero-image"
             alt="Açaí cremoso artesanal na garrafa pronto para beber"
             ratio="1"
@@ -51,6 +51,9 @@
 </template>
 
 <script setup>
+import logomarcaacai from 'src/assets/LogomarcaAçai.png'
+import acaicomcanudo from 'src/assets/acaicomcanudo.jpg'
+
 const whatsappLink =
   'https://wa.me/5577988890597?text=Oi!%20Quero%20quero%20um%20açaí%20na%20garrafa%20😋'
 </script>
