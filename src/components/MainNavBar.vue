@@ -3,7 +3,7 @@
     <q-toolbar class="toolbar q-px-lg">
       <!-- LOGO -->
       <div class="row items-center no-wrap">
-        <q-img src="/icons/LogomarcaAçai.png" class="logo" fit="contain" />
+        <q-img src="src/assets/LogomarcaAçai.png" class="logo" fit="contain" />
         <span class="brand gt-xs">Açaí na Garrafa</span>
       </div>
 
@@ -22,7 +22,7 @@
   <!-- DRAWER MOBILE -->
   <q-drawer v-model="drawer" side="right" overlay class="drawer-premium">
     <div class="drawer-header">
-      <q-img src="/icons/LogomarcaAçai.png" class="drawer-logo" />
+      <q-img src="src/assets/LogomarcaAçai.png" class="drawer-logo" />
     </div>
 
     <q-list padding>
@@ -51,6 +51,7 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'Fotos', href: '#fotos' },
   { label: 'Sabores', href: '#sabores' },
+  { label: 'Porque Nós', href: '#contato' },
   { label: 'Preparo', href: '#preparo' },
   { label: 'Feedbacks', href: '#feedbacks' },
   { label: 'Contato', href: '#contato' },

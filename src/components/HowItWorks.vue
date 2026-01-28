@@ -1,9 +1,11 @@
 <template>
   <section class="section how-premium" id="preparo">
-    <h2 class="section-title text-center">Como funciona</h2>
+    <h2 class="section-title text-center">Como funciona?</h2>
 
     <div class="timeline">
       <div v-for="(step, i) in steps" :key="i" class="timeline-item">
+        <div v-if="i > 0" class="line-vertical" />
+
         <div class="icon-wrapper">
           <q-icon :name="step.icon" size="34px" color="white" />
         </div>
@@ -13,7 +15,7 @@
           <p>{{ step.desc }}</p>
         </div>
 
-        <div v-if="i < steps.length - 1" class="line" />
+        <div v-if="i < steps.length - 1" class="line-horizontal" />
       </div>
     </div>
   </section>
@@ -22,17 +24,17 @@
 <script setup>
 const steps = [
   {
-    icon: 'mdi-food',
+    icon: 'dining',
     title: 'Escolha seu sabor',
     desc: 'Tradicional, morango ou maracujá — você decide.',
   },
   {
-    icon: 'mdi-blender',
+    icon: 'blender',
     title: 'Batemos na hora',
     desc: 'Tudo feito no momento para garantir cremosidade.',
   },
   {
-    icon: 'mdi-motorbike',
+    icon: 'motorcycle',
     title: 'Entrega rápida',
     desc: 'Chega geladinho pra você se refrescar.',
   },
@@ -40,12 +42,6 @@ const steps = [
 </script>
 
 <style scoped>
-.how-premium {
-  background:
-    radial-gradient(circle at top right, #8e5fbf22, transparent 60%),
-    linear-gradient(180deg, #ffffff, #f4eedc);
-}
-
 /* TIMELINE BASE */
 .timeline {
   max-width: 900px;
@@ -87,7 +83,7 @@ const steps = [
 }
 
 /* LINE */
-.line {
+.line-horizontal {
   position: absolute;
   top: 32px;
   right: -50%;
@@ -97,25 +93,26 @@ const steps = [
   z-index: 1;
 }
 
-/* MOBILE = VERTICAL */
+.line-vertical {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
     align-items: center;
   }
 
-  .timeline-item {
-    margin-bottom: 60px;
+  .line-horizontal {
+    display: none;
   }
 
-  .line {
+  .line-vertical {
+    display: block;
     width: 4px;
     height: 60px;
-    top: 70px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, var(--roxo-claro), transparent);
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, transparent, var(--roxo-claro));
   }
 }
 </style>

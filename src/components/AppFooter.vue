@@ -3,7 +3,7 @@
     <div class="footer-container">
       <!-- BRAND -->
       <div class="footer-col brand text-center">
-        <q-img src="/icons/LogomarcaAçai.png" class="footer-logo" />
+        <q-img src="src/assets/LogomarcaAçai.png" class="footer-logo" />
         <p>
           Açaí artesanal na garrafa, feito na hora com ingredientes de qualidade. Refresque seu dia
           com muito sabor 💜
@@ -15,13 +15,12 @@
         <h5>Redes</h5>
 
         <div class="social flex flex-center">
-          <q-btn round dense icon="call" class="social-btn" :href="whatsapp" target="_blank" />
+          <q-btn round dense icon="call" :href="whatsapp" target="_blank" />
 
           <q-btn
             round
             dense
             icon="ti-instagram"
-            class="social-btn"
             href="https://instagram.com/acainagarrafavdc"
             target="_blank"
           />

@@ -1,19 +1,11 @@
 <template>
   <section class="section gallery-premium" id="fotos">
-    <h2 class="section-title text-center">Cremosidade que dá gosto 🤤</h2>
+    <h2 class="section-title text-center">Cremosidade que dá gosto!</h2>
 
-    <q-carousel
-      v-model="slide"
-      animated
-      swipeable
-      infinite
-      arrows
-      height="340px"
-      class="carousel-premium"
-    >
+    <q-carousel v-model="slide" animated swipeable infinite arrows class="carousel-premium">
       <q-carousel-slide v-for="(img, i) in images" :key="i" :name="i">
         <div class="img-frame">
-          <q-img :src="img" fit="cover" class="gallery-img" />
+          <q-img :src="img" class="gallery-img" />
         </div>
       </q-carousel-slide>
     </q-carousel>
@@ -33,14 +25,11 @@ const images = [img1, img2, img3]
 </script>
 
 <style scoped>
-.gallery-premium {
-  background: linear-gradient(180deg, #f4eedc, #ffffff);
-}
-
 .carousel-premium {
   border-radius: 28px;
   overflow: hidden;
   max-width: 900px;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -49,13 +38,13 @@ const images = [img1, img2, img3]
   justify-content: center;
   align-items: center;
   height: 100%;
-  min-height: 220px; /* ensure there's room for the image inside the carousel */
+  overflow: hidden;
 }
 
 .gallery-img {
-  width: 90%;
-  max-height: 100%;
-  height: auto; /* keep aspect ratio */
+  width: 100%;
+  height: 100%; /* keep aspect ratio */
+  object-fit: contain;
   border-radius: 22px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
 }

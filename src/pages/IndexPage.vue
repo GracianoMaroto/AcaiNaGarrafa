@@ -2,7 +2,7 @@
   <q-layout view="hHh lpR fFf">
     <MainNavBar />
     <q-page-container>
-      <q-page id="home">
+      <q-page id="home" :class="isMobile ? 'background' : 'background q-pt-lg'">
         <HeroSection />
 
         <section id="fotos">
@@ -22,8 +22,11 @@
           <Testimonials />
         </section>
 
-        <section id="contato">
+        <section id="porque">
           <FinalCTA />
+        </section>
+
+        <section id="contato">
           <AppFooter />
         </section>
 
@@ -47,6 +50,13 @@ import AppFooter from 'components/AppFooter.vue'
 import FloatingWhatsapp from 'components/FloatingWhatsapp.vue'
 import StickyMobileCTA from 'components/StickyMobileCTA.vue'
 import MainNavBar from 'src/components/MainNavBar.vue'
+import { computed } from 'vue'
+import { useQuasar } from 'quasar'
+
+const $q = useQuasar()
+
+const isMobile = computed(() => $q.screen.lt.md)
+
 // import { useMeta } from 'quasar'
 
 // ------------ FERRAMENTAS DE SEO - OTIMIZAR DEPOIS ------------
@@ -114,3 +124,12 @@ import MainNavBar from 'src/components/MainNavBar.vue'
 //   },
 // })
 </script>
+
+<style scoped>
+.background {
+  background:
+    radial-gradient(circle at top left, #8e5fbf33, transparent 55%),
+    radial-gradient(circle at bottom right, #5a2d8233, transparent 55%),
+    linear-gradient(135deg, #f4eedc, #ffffff);
+}
+</style>

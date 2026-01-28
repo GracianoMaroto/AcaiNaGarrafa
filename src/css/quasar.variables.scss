@@ -65,6 +65,7 @@ $warning: #f2c037;
   font-family: var(--font-title);
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: 1px;
+  font-weight: bold;
   color: var(--roxo-principal);
   text-transform: uppercase;
 }
@@ -89,7 +90,7 @@ $warning: #f2c037;
 
 @media (max-width: 600px) {
   .section {
-    padding: 60px 16px;
+    padding: 8px 16px;
   }
 
   .glass-card {

@@ -1,11 +1,17 @@
 <template>
-  <section class="section">
+  <section class="section" id="porque">
     <h2 class="section-title text-center">Por que nosso açaí é diferente?</h2>
 
-    <div class="row container q-col-gutter-lg text-center">
+    <div
+      :class="
+        isMobile
+          ? 'row container q-col-gutter-lg text-center'
+          : 'row container q-col-gutter-lg q-px-xl text-center'
+      "
+    >
       <div class="col-12 col-md-4" v-for="item in items" :key="item.title">
         <div class="why-card glass-card">
-          <q-icon :name="item.icon" size="40px" color="primary" />
+          <q-icon :name="item.icon" size="40px" style="color: var(--roxo-principal)" />
           <h4>{{ item.title }}</h4>
           <p>{{ item.desc }}</p>
         </div>
@@ -15,10 +21,17 @@
 </template>
 
 <script setup>
+import { useQuasar } from 'quasar'
+import { computed } from 'vue'
+
+const $q = useQuasar()
+
+const isMobile = computed(() => $q.screen.lt.md)
+
 const items = [
-  { icon: 'mdi-blender', title: 'Feito na Hora', desc: 'Sempre fresquinho e saboroso.' },
-  { icon: 'mdi-fruit-cherries', title: 'Ingredientes Selecionados', desc: 'Nada de xarope.' },
-  { icon: 'mdi-heart', title: 'Cremosidade Real', desc: 'Textura encorpada e natural.' },
+  { icon: 'blender', title: 'Feito na Hora', desc: 'Sempre fresquinho e saboroso.' },
+  { icon: 'verified', title: 'Ingredientes Selecionados', desc: 'Nada de xarope.' },
+  { icon: 'favorite', title: 'Cremosidade Real', desc: 'Textura encorpada e natural.' },
 ]
 </script>
 

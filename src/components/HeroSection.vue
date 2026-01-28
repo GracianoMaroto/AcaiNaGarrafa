@@ -1,21 +1,18 @@
 <template>
   <section class="hero-premium">
-    <div class="container">
+    <div class="container q-px-md q-pt-xs">
       <div class="row items-center q-col-gutter-lg">
         <!-- TEXTO / CARD -->
         <div class="col-12 col-md-6 flex flex-center text-center">
           <div class="hero-card">
             <q-img
-              src="/icons/LogomarcaAçai.png"
+              src="/src/assets/LogomarcaAçai.png"
               class="logo"
               fit="contain"
               alt="Açaí artesanal na garrafa Vitória da Conquista"
             />
 
-            <h1>
-              Açaí cremoso de verdade,
-              <span>na garrafa.</span>
-            </h1>
+            <h1>Açaí cremoso de verdade, na garrafa.</h1>
 
             <p class="subtitle">
               Produção artesanal, feito na hora, com frutas frescas e ingredientes selecionados.
@@ -42,7 +39,7 @@
           <div class="glow"></div>
 
           <q-img
-            src="/icons/acaicomcanudo.jpg"
+            src="src/assets/acaicomcanudo.jpg"
             class="hero-image"
             alt="Açaí cremoso artesanal na garrafa pronto para beber"
             ratio="1"
@@ -59,14 +56,6 @@ const whatsappLink =
 </script>
 
 <style scoped>
-.hero-premium {
-  background:
-    radial-gradient(circle at top left, #8e5fbf33, transparent 55%),
-    radial-gradient(circle at bottom right, #5a2d8233, transparent 55%),
-    linear-gradient(135deg, #f4eedc, #ffffff);
-  padding: 120px 0 90px;
-}
-
 /* CARD */
 .hero-card {
   background: rgba(255, 255, 255, 0.85);
@@ -91,10 +80,6 @@ h1 {
   color: var(--roxo-principal);
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.1;
-}
-
-h1 span {
-  color: var(--roxo-escuro);
 }
 
 .subtitle {

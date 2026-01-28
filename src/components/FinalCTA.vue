@@ -10,7 +10,7 @@
       <div class="cta-actions">
         <q-btn
           unelevated
-          size="xl"
+          size="lg"
           icon="call"
           class="cta-whatsapp"
           label="Pedir no WhatsApp"
@@ -82,16 +82,8 @@ const whatsapp =
 .cta-whatsapp {
   background: linear-gradient(135deg, #25d366, #1ebe5d);
   border-radius: 18px;
-  padding: 18px 38px;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.5px;
-  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.6);
-  transition: all 0.25s ease;
-}
-
-.cta-whatsapp:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 20px 55px rgba(37, 211, 102, 0.8);
 }
 
 .cta-instagram {

@@ -2,7 +2,9 @@
   <section class="section" id="sabores">
     <h2 class="section-title text-center">Nossos Sabores</h2>
 
-    <div class="row q-col-gutter-lg container">
+    <div
+      :class="isMobile ? 'row q-col-gutter-lg container' : 'row q-col-gutter-lg container q-px-xl'"
+    >
       <div v-for="flavor in flavors" :key="flavor.name" class="col-12 col-md-4">
         <q-card class="flavor-card-premium">
           <q-img
@@ -34,7 +36,13 @@
 </template>
 
 <script setup>
+import { useQuasar } from 'quasar'
 import { whatsappMsg } from 'src/utils/whatsapp'
+import { computed } from 'vue'
+
+const $q = useQuasar()
+
+const isMobile = computed(() => $q.screen.lt.md)
 
 const flavors = [
   {
