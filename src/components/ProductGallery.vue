@@ -2,7 +2,7 @@
   <section class="section gallery-premium" id="fotos">
     <h2 class="section-title text-center">Cremosidade que dá gosto!</h2>
 
-    <q-carousel v-model="slide" animated swipeable infinite arrows class="carousel-premium">
+    <q-carousel v-model="slide" swipeable infinite navigation arrows class="carousel-premium">
       <q-carousel-slide v-for="(img, i) in images" :key="i" :name="i">
         <div class="img-frame">
           <q-img :src="img" class="gallery-img" />
@@ -26,10 +26,12 @@ const images = [img1, img2, img3]
 
 <style scoped>
 .carousel-premium {
+  background-color: rgba(97, 64, 128, 0.815);
   border-radius: 22px;
   overflow: hidden;
   max-width: 900px;
   height: auto;
+  min-height: 560px;
   margin: 0 auto;
 }
 
