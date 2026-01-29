@@ -2,37 +2,51 @@
   <q-layout view="hHh lpR fFf">
     <MainNavBar />
     <q-page-container>
-      <q-page id="home" :class="isMobile ? 'background' : 'background q-pt-lg'">
-        <HeroSection />
+      <q-page class="background">
+        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+          <section id="home">
+            <HeroSection />
+          </section>
+        </div>
 
-        <section id="fotos">
-          <ProductGallery />
-        </section>
+        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+          <section id="fotos">
+            <ProductGallery />
+          </section>
+        </div>
 
-        <section id="sabores">
-          <FlavorsSection />
-        </section>
+        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+          <section id="sabores">
+            <FlavorsSection />
+          </section>
+        </div>
 
-        <section id="nosso_acai">
-          <WhyUsSection />
-        </section>
+        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+          <section id="nosso_acai">
+            <WhyUsSection />
+          </section>
+        </div>
 
-        <section id="preparo">
-          <HowItWorks />
-        </section>
+        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+          <section id="preparo">
+            <HowItWorks />
+          </section>
+        </div>
 
-        <section id="feedbacks">
-          <Testimonials />
-        </section>
+        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+          <section id="feedbacks">
+            <Testimonials />
+          </section>
+        </div>
 
-        <section id="contato">
-          <FinalCTA />
-          <AppFooter />
-        </section>
+        <div :class="isMobile ? 'normal' : 'q-pt-xl'">
+          <section id="contato">
+            <FinalCTA />
+            <AppFooter />
+          </section>
+        </div>
 
         <FloatingWhatsapp />
-
-        <!-- <StickyMobileCTA /> -->
       </q-page>
     </q-page-container>
   </q-layout>
@@ -48,7 +62,6 @@ import Testimonials from 'components/TestimonialsReports.vue'
 import FinalCTA from 'components/FinalCTA.vue'
 import AppFooter from 'components/AppFooter.vue'
 import FloatingWhatsapp from 'components/FloatingWhatsapp.vue'
-// import StickyMobileCTA from 'components/StickyMobileCTA.vue'
 import MainNavBar from 'src/components/MainNavBar.vue'
 import { computed } from 'vue'
 import { useQuasar } from 'quasar'

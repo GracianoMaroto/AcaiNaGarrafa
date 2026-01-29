@@ -1,11 +1,11 @@
 <template>
   <section class="hero-premium">
-    <div class="container q-px-md q-pt-xs">
+    <div :class="isMobile ? 'container q-px-md q-pt-xs' : 'container q-px-xl q-pt-xs'">
       <div class="q-col-gutter-lg">
         <!-- TEXTO / CARD -->
         <div class="card">
           <q-card class="row hero-card">
-            <div class="col-12 col-md-6 hero-text" style="text-align: center">
+            <div class="col-12 col-md-6 hero-text">
               <q-img
                 :src="logomarcaacai"
                 class="logo"
@@ -35,8 +35,7 @@
               <q-img
                 :src="acaicomcanudo"
                 alt="Açaí cremoso artesanal na garrafa pronto para beber"
-                class="full-width"
-                style="object-fit: cover; height: 100%"
+                fit="cover"
               />
             </div>
           </q-card>
@@ -65,7 +64,7 @@ const whatsappLink =
 /* CARD */
 .hero-card {
   min-height: 420px;
-  max-height: 700px;
+  max-height: 800px;
   backdrop-filter: blur(12px);
   border-radius: 28px;
   box-shadow:
@@ -75,8 +74,15 @@ const whatsappLink =
 }
 
 .hero-text {
-  padding: 40px 36px;
+  padding: 40px 48px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
 }
 
 .logo {
