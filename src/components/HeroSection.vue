@@ -1,49 +1,45 @@
 <template>
   <section class="hero-premium">
     <div class="container q-px-md q-pt-xs">
-      <div class="row items-center q-col-gutter-lg">
+      <div class="q-col-gutter-lg">
         <!-- TEXTO / CARD -->
-        <div class="col-12 col-md-6 flex flex-center text-center">
-          <div class="hero-card">
-            <q-img
-              :src="logomarcaacai"
-              class="logo"
-              fit="contain"
-              alt="Açaí artesanal na garrafa Vitória da Conquista"
-            />
+        <div class="card">
+          <q-card class="row hero-card">
+            <div class="col-12 col-md-6 hero-text" style="text-align: center">
+              <q-img
+                :src="logomarcaacai"
+                class="logo"
+                fit="contain"
+                alt="Açaí artesanal na garrafa Vitória da Conquista"
+              />
 
-            <h1>Açaí cremoso de verdade, na garrafa.</h1>
+              <h1>Açaí cremoso de verdade, na garrafa.</h1>
 
-            <p class="subtitle">
-              Produção artesanal, feito na hora, com frutas frescas e ingredientes selecionados.
-            </p>
+              <p class="subtitle">
+                Produção artesanal, feito na hora, com frutas frescas e ingredientes selecionados.
+              </p>
 
-            <div class="benefits q-gutter-md">
-              <span>🥤 Cremoso</span>
-              <span>🍓 Natural</span>
-              <span>⚡ Artesanal</span>
+              <div class="benefits q-gutter-md">
+                <span>🥤 Cremoso</span>
+                <span>🍓 Natural</span>
+                <span>⚡ Artesanal</span>
+              </div>
+
+              <q-btn unelevated size="lg" class="cta-btn q-mt-lg" :href="whatsappLink">
+                <q-icon name="bi-whatsapp" color="white" size="25px" class="q-mr-sm" />
+                <span style="font-size: 20px; color: white"> WhatsApp </span>
+              </q-btn>
             </div>
 
-            <q-btn
-              unelevated
-              size="lg"
-              class="cta-btn q-mt-lg"
-              label="Pedir agora no WhatsApp"
-              :href="whatsappLink"
-            />
-          </div>
-        </div>
-
-        <!-- IMAGEM -->
-        <div class="col-12 col-md-6 flex flex-center hero-image-wrapper">
-          <div class="glow"></div>
-
-          <q-img
-            :src="acaicomcanudo"
-            class="hero-image"
-            alt="Açaí cremoso artesanal na garrafa pronto para beber"
-            ratio="1"
-          />
+            <div v-if="!isMobile" class="col-12 col-md-6">
+              <q-img
+                :src="acaicomcanudo"
+                alt="Açaí cremoso artesanal na garrafa pronto para beber"
+                class="full-width"
+                style="object-fit: cover; height: 100%"
+              />
+            </div>
+          </q-card>
         </div>
       </div>
     </div>
@@ -53,6 +49,13 @@
 <script setup>
 import logomarcaacai from 'src/assets/LogomarcaAçai.png'
 import acaicomcanudo from 'src/assets/acaicomcanudo.jpg'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import { computed } from 'vue'
+import { useQuasar } from 'quasar'
+
+const $q = useQuasar()
+
+const isMobile = computed(() => $q.screen.lt.md)
 
 const whatsappLink =
   'https://wa.me/5577988890597?text=Oi!%20Quero%20quero%20um%20açaí%20na%20garrafa%20😋'
@@ -61,16 +64,19 @@ const whatsappLink =
 <style scoped>
 /* CARD */
 .hero-card {
-  background: rgba(255, 255, 255, 0.85);
+  min-height: 420px;
+  max-height: 700px;
   backdrop-filter: blur(12px);
   border-radius: 28px;
-  padding: 40px 36px;
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  overflow: hidden;
+}
+
+.hero-text {
+  padding: 40px 36px;
+  text-align: center;
 }
 
 .logo {
@@ -112,27 +118,6 @@ h1 {
   box-shadow: 0 18px 40px rgba(37, 211, 102, 0.6);
 }
 
-/* IMAGE */
-.hero-image-wrapper {
-  position: relative;
-}
-
-.glow {
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, #8e5fbf99, transparent 70%);
-  filter: blur(30px);
-  z-index: 0;
-}
-
-.hero-image {
-  max-width: 420px;
-  border-radius: 26px;
-  z-index: 1;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
-}
-
 /* MOBILE */
 @media (max-width: 600px) {
   .hero-premium {
@@ -146,11 +131,6 @@ h1 {
 
   .subtitle {
     max-width: 100%;
-  }
-
-  .glow {
-    width: 200px;
-    height: 200px;
   }
 }
 </style>

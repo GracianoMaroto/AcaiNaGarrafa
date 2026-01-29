@@ -32,7 +32,7 @@
 
         <FloatingWhatsapp />
 
-        <StickyMobileCTA />
+        <!-- <StickyMobileCTA /> -->
       </q-page>
     </q-page-container>
   </q-layout>
@@ -48,7 +48,7 @@ import Testimonials from 'components/TestimonialsReports.vue'
 import FinalCTA from 'components/FinalCTA.vue'
 import AppFooter from 'components/AppFooter.vue'
 import FloatingWhatsapp from 'components/FloatingWhatsapp.vue'
-import StickyMobileCTA from 'components/StickyMobileCTA.vue'
+// import StickyMobileCTA from 'components/StickyMobileCTA.vue'
 import MainNavBar from 'src/components/MainNavBar.vue'
 import { computed } from 'vue'
 import { useQuasar } from 'quasar'

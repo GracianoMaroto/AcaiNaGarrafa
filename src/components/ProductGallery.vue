@@ -26,7 +26,7 @@ const images = [img1, img2, img3]
 
 <style scoped>
 .carousel-premium {
-  border-radius: 28px;
+  border-radius: 22px;
   overflow: hidden;
   max-width: 900px;
   height: auto;
@@ -39,6 +39,7 @@ const images = [img1, img2, img3]
   align-items: center;
   height: 100%;
   overflow: hidden;
+  border-radius: 22px;
 }
 
 .gallery-img {
