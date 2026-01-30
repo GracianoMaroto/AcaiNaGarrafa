@@ -93,7 +93,7 @@ const whatsappLink =
 /* CARD */
 .hero-card {
   min-height: 420px;
-  max-height: 800px;
+  max-height: 740px;
   backdrop-filter: blur(12px);
   border-radius: 28px;
   box-shadow:
