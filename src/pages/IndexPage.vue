@@ -126,6 +126,21 @@ useMeta({
     },
     ogType: { property: 'og:type', content: 'website' },
 
+    ogUrl: {
+      property: 'og:url',
+      content: 'https://acainagarrafavdc.netlify.app/',
+    },
+    ogLocale: {
+      property: 'og:locale',
+      content: 'pt_BR',
+    },
+  },
+  link: {
+    canonical: {
+      rel: 'canonical',
+      href: 'https://acainagarrafavdc.netlify.app/',
+    },
+
     // Twitter
     twitterCard: {
       name: 'twitter:card',
