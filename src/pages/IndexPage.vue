@@ -70,72 +70,69 @@ const $q = useQuasar()
 
 const isMobile = computed(() => $q.screen.lt.md)
 
-// import { useMeta } from 'quasar'
+import { useMeta } from 'quasar'
 
-// ------------ FERRAMENTAS DE SEO - OTIMIZAR DEPOIS ------------
+useMeta({
+  script: {
+    ldjson: {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FoodEstablishment',
+        name: 'Açaí na Garrafa',
+        image: 'https://acainagarrafavdc.netlify.app/seo/preview.jpg',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Vitória da Conquista',
+          addressRegion: 'BA',
+          addressCountry: 'BR',
+        },
+        telephone: '+5577988890597',
+        servesCuisine: 'Açaí',
+        priceRange: '$',
+        sameAs: ['https://instagram.com/acainagarrafavdc'],
+      }),
+    },
+  },
+  title: 'Açaí na Garrafa em Vitória da Conquista | Artesanal e Cremoso',
+  titleTemplate: (title) => `${title} — Peça no WhatsApp`,
+  meta: {
+    description: {
+      name: 'description',
+      content:
+        'Açaí artesanal na garrafa em Vitória da Conquista. Cremoso, feito na hora, com frutas frescas. Peça pelo WhatsApp ou iFood.',
+    },
 
-// useMeta({
-// script: {
-//     ldjson: {
-//       type: 'application/ld+json',
-//       innerHTML: JSON.stringify({
-//         '@context': 'https://schema.org',
-//         '@type': 'FoodEstablishment',
-//         name: 'Açaí na Garrafa',
-//         image: 'https://SEUSITE.com/seo/preview.jpg',
-//         address: {
-//           '@type': 'PostalAddress',
-//           addressLocality: 'Vitória da Conquista',
-//           addressRegion: 'BA',
-//           addressCountry: 'BR',
-//         },
-//         telephone: '+5577988890597',
-//         servesCuisine: 'Açaí',
-//         priceRange: '$$',
-//         sameAs: ['https://instagram.com/acainagarrafavdc'],
-//       }),
-//     },
-//   },
-//   title: 'Açaí na Garrafa em Vitória da Conquista | Artesanal e Cremoso',
-//   titleTemplate: (title) => `${title} — Peça no WhatsApp`,
-//   meta: {
-//     description: {
-//       name: 'description',
-//       content:
-//         'Açaí artesanal na garrafa em Vitória da Conquista. Cremoso, feito na hora, com frutas frescas. Peça pelo WhatsApp ou iFood.',
-//     },
+    keywords: {
+      name: 'keywords',
+      content:
+        'açaí em vitória da conquista, açaí na garrafa, açaí artesanal, açaí delivery, açaí cremoso, açaí no ifood',
+    },
 
-//     keywords: {
-//       name: 'keywords',
-//       content:
-//         'açaí em vitória da conquista, açaí na garrafa, açaí artesanal, açaí delivery, açaí cremoso, açaí no ifood',
-//     },
+    robots: { name: 'robots', content: 'index, follow' },
 
-//     robots: { name: 'robots', content: 'index, follow' },
+    // Open Graph (WhatsApp / Facebook)
+    ogTitle: {
+      property: 'og:title',
+      content: 'Açaí na Garrafa em Vitória da Conquista 🥤💜',
+    },
+    ogDescription: {
+      property: 'og:description',
+      content: 'Cremoso, artesanal e feito na hora. Peça seu açaí na garrafa pelo WhatsApp!',
+    },
+    ogImage: {
+      property: 'og:image',
+      content: 'https://acainagarrafavdc.netlify.app/seo/preview.jpg',
+    },
+    ogType: { property: 'og:type', content: 'website' },
 
-//     // Open Graph (WhatsApp / Facebook)
-//     ogTitle: {
-//       property: 'og:title',
-//       content: 'Açaí na Garrafa em Vitória da Conquista 🥤💜',
-//     },
-//     ogDescription: {
-//       property: 'og:description',
-//       content:
-//         'Cremoso, artesanal e feito na hora. Peça seu açaí na garrafa pelo WhatsApp!',
-//     },
-//     ogImage: {
-//       property: 'og:image',
-//       content: 'https://SEUSITE.com/seo/preview.jpg',
-//     },
-//     ogType: { property: 'og:type', content: 'website' },
-
-//     // Twitter
-//     twitterCard: {
-//       name: 'twitter:card',
-//       content: 'summary_large_image',
-//     },
-//   },
-// })
+    // Twitter
+    twitterCard: {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+  },
+})
 </script>
 
 <style scoped>
