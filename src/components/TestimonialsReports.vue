@@ -58,7 +58,7 @@ const isMobile = computed(() => $q.screen.lt.md)
 const slide = ref(0)
 
 const testimonials = [
-  { name: 'Heder David', initials: 'HD', text: 'Muito bom e refrescante' },
+  { name: 'Heder David', initials: 'HD', text: 'Muito bom e geladinho' },
   { name: 'Jaquionias Ferraz', initials: 'JF', text: 'Rapaz, parece um milkshake' },
   { name: 'Poliana Souza', initials: 'PS', text: 'Deveria ter um plano de assinatura' },
 

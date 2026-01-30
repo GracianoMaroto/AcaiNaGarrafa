@@ -31,7 +31,7 @@ const images = [img1, img2, img3]
   overflow: hidden;
   max-width: 900px;
   height: auto;
-  min-height: 560px;
+  min-height: 565px;
   margin: 0 auto;
 }
 

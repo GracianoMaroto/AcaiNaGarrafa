@@ -50,21 +50,21 @@ const isMobile = computed(() => $q.screen.lt.md)
 const flavors = [
   {
     name: 'Tradicional',
-    desc: 'Açaí batido com leite condensado',
+    desc: 'Açaí da Bahia batido com leite e decorado com leite condensado.',
     image: acaileitecondensado,
-    link: whatsappMsg('Quero o açaí tradicional 🍇'),
+    link: whatsappMsg('Quero o açaí tradicional 💜'),
   },
   {
     name: 'Morango',
-    desc: 'Açaí com morango e leite condensado',
+    desc: 'Açaí da Bahia batido com leite, deliciosos morangos e decorado com leite condensado.',
     image: acaimorango,
     link: whatsappMsg('Quero o açaí de morango 🍓'),
   },
   {
     name: 'Maracujá',
-    desc: 'Açaí com calda artesanal de maracujá',
+    desc: 'Açaí da Bahia batido com leite e decorado com calda artesanal de Maracujá.',
     image: acaimaracuja,
-    link: whatsappMsg('Quero o açaí de maracujá 🥭'),
+    link: whatsappMsg('Quero o açaí de maracujá 😋'),
   },
 ]
 </script>

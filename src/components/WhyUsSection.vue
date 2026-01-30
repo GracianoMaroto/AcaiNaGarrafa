@@ -29,9 +29,17 @@ const $q = useQuasar()
 const isMobile = computed(() => $q.screen.lt.md)
 
 const items = [
-  { icon: 'blender', title: 'Feito na Hora', desc: 'Sempre fresquinho e saboroso.' },
-  { icon: 'verified', title: 'Ingredientes Selecionados', desc: 'Nada de xarope.' },
-  { icon: 'favorite', title: 'Cremosidade Real', desc: 'Textura encorpada e natural.' },
+  { icon: 'blender', title: 'Batido com Leite', desc: 'Nada de água, leite integral de marca.' },
+  {
+    icon: 'verified',
+    title: 'Ingredientes Selecionados',
+    desc: 'Açái da Bahia, frutas e leite condensado de marca.',
+  },
+  {
+    icon: 'favorite',
+    title: 'Cremosidade Real',
+    desc: 'Nada daquele suco de açaí aguado.',
+  },
 ]
 </script>
 

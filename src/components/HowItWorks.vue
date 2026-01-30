@@ -30,13 +30,13 @@ const steps = [
   },
   {
     icon: 'blender',
-    title: 'Batemos na hora',
-    desc: 'Tudo feito no momento para garantir cremosidade.',
+    title: 'Preparo e embalagem',
+    desc: 'Um processo cuidadoso para manter a qualidade e o sabor.',
   },
   {
     icon: 'motorcycle',
     title: 'Entrega rápida',
-    desc: 'Chega geladinho pra você se refrescar.',
+    desc: 'Chega geladinho pra você se refrescar (aos fins de semana).',
   },
 ]
 </script>

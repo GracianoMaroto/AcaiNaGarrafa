@@ -1,7 +1,7 @@
 <template>
   <section class="final-cta-premium" id="contato">
     <div class="cta-box">
-      <h2>Pronto para se apaixonar pelo nosso açaí? 💜</h2>
+      <h2>Pronto(a) para se apaixonar pelo nosso açaí? 💜</h2>
 
       <p>
         Peça agora seu açaí artesanal na garrafa e receba geladinho, do jeitinho que você merece.

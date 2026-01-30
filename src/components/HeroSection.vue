@@ -1,6 +1,34 @@
 <template>
-  <section class="hero-premium">
-    <div :class="isMobile ? 'container q-px-md q-pt-xs' : 'container q-px-xl q-pt-xs'">
+  <section>
+    <div :class="isMobile ? 'container q-px-md q-pt-sm' : 'container q-px-xl'">
+      <div class="text-center q-mb-sm">
+        <span
+          style="
+            color: var(--roxo-principal);
+            font-style: italic;
+            font-weight: bolder;
+            font-family:
+              Apple Chancery,
+              cursive;
+          "
+        >
+          Provérbios 16:3
+        </span>
+        <br />
+        <span
+          style="
+            color: var(--roxo-principal);
+            font-style: italic;
+            font-weight: bolder;
+
+            font-family:
+              Apple Chancery,
+              cursive;
+          "
+        >
+          "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos."
+        </span>
+      </div>
       <div class="q-col-gutter-lg">
         <!-- TEXTO / CARD -->
         <div class="card">
@@ -16,7 +44,8 @@
               <h1>Açaí cremoso de verdade, na garrafa.</h1>
 
               <p class="subtitle">
-                Produção artesanal, feito na hora, com frutas frescas e ingredientes selecionados.
+                Produção artesanal, com açaí de qualidade, frutas deliciosas e ingredientes
+                selecionados.
               </p>
 
               <div class="benefits q-gutter-md">

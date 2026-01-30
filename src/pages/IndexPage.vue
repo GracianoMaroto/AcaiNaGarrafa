@@ -3,7 +3,7 @@
     <MainNavBar />
     <q-page-container>
       <q-page class="background">
-        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+        <div :class="isMobile ? 'normal' : 'q-pt-md q-pb-xl'">
           <section id="home">
             <HeroSection />
           </section>
