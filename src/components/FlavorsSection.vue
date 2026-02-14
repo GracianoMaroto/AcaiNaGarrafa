@@ -39,8 +39,8 @@
 import { useQuasar } from 'quasar'
 import { whatsappMsg } from 'src/utils/whatsapp'
 import { computed } from 'vue'
-import acaileitecondensado from 'src/assets/acaileitecondensado.jpeg'
-import acaimorango from 'src/assets/acaimorango.jpg'
+import acaitradicional from 'src/assets/AcaiTradicional.jpeg'
+import acaimorango from 'src/assets/AcaiMorango.jpeg'
 import acaimaracuja from 'src/assets/acaimaracuja.jpeg'
 
 const $q = useQuasar()
@@ -50,19 +50,19 @@ const isMobile = computed(() => $q.screen.lt.md)
 const flavors = [
   {
     name: 'Tradicional',
-    desc: 'Açaí da Bahia batido com leite e decorado com leite condensado.',
-    image: acaileitecondensado,
+    desc: 'Açaí da Bahia batido com leite e decorado com leite condensado. Acompanha 01 paçoca para uma experiência ainda mais saborosa.',
+    image: acaitradicional,
     link: whatsappMsg('Quero o açaí tradicional 💜'),
   },
   {
     name: 'Morango',
-    desc: 'Açaí da Bahia batido com leite, deliciosos morangos e decorado com leite condensado.',
+    desc: 'Açaí da Bahia batido com leite, deliciosos morangos e decorado um mousse de morango irresistível.',
     image: acaimorango,
     link: whatsappMsg('Quero o açaí de morango 🍓'),
   },
   {
     name: 'Maracujá',
-    desc: 'Açaí da Bahia batido com leite e decorado com calda artesanal de Maracujá.',
+    desc: 'Açaí da Bahia batido com leite e decorado com um mousse de Maracujá de cair o queixo.',
     image: acaimaracuja,
     link: whatsappMsg('Quero o açaí de maracujá 😋'),
   },
@@ -83,6 +83,7 @@ const flavors = [
 }
 
 .flavor-img {
+  min-height: 700px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 

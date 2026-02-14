@@ -9,7 +9,7 @@
           </section>
         </div>
 
-        <div :class="isMobile ? 'normal' : 'q-pt-xl q-pb-xl'">
+        <div v-if="isMobile">
           <section id="fotos">
             <ProductGallery />
           </section>

@@ -62,7 +62,7 @@
 
             <div v-if="!isMobile" class="col-12 col-md-6">
               <q-img
-                :src="acaicomcanudo"
+                :src="saboresAcai"
                 alt="Açaí cremoso artesanal na garrafa pronto para beber"
                 fit="cover"
               />
@@ -76,7 +76,7 @@
 
 <script setup>
 import logomarcaacai from 'src/assets/LogomarcaAçai.png'
-import acaicomcanudo from 'src/assets/acaicomcanudo.jpg'
+import saboresAcai from 'src/assets/SaboresAcai.jpeg'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { computed } from 'vue'
 import { useQuasar } from 'quasar'
